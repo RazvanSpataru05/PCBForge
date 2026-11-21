@@ -3,6 +3,7 @@
     public class Template
     {
         public int Id { get; set; }
+        public int OwnerId { get; set; }
         public required string Name { get; set; }
         public string? Description { get; set; }
         public required string BoardData { get; set; }

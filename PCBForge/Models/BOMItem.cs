@@ -1,6 +1,6 @@
 ﻿namespace PCBForge.Models
 {
-    public class BOMItem
+    public class BomItem
     {
         public int Id { get; set; }
         public int TemplateId { get; set; }
