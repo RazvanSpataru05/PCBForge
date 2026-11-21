@@ -1,0 +1,6 @@
+@PCBForge_HostAddress = http://localhost:5265
+
+GET {{PCBForge_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
