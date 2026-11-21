@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PCBForge.Models;
+using PCBForge.backend.Models;
 
-namespace PCBForge.Data
+namespace PCBForge.backend.Data
 {
     public class AppDbContext : DbContext
     {

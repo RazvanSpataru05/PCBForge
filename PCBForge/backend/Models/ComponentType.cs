@@ -1,4 +1,4 @@
-﻿namespace PCBForge.Models
+﻿namespace PCBForge.backend.Models
 {
     public class ComponentType
     {

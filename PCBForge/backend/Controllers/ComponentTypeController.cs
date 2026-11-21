@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using PCBForge.Data;
+using PCBForge.backend.Data;
 
-namespace PCBForge.Controllers
+namespace PCBForge.backend.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

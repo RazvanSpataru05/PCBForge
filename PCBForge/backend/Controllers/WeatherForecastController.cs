@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace PCBForge.Controllers
+namespace PCBForge.backend.Controllers
 {
     [ApiController]
     [Route("[controller]")]

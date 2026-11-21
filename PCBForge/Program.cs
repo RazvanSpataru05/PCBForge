@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using PCBForge.Data;
+using PCBForge.backend.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
