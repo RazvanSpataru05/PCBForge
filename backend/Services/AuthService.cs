@@ -1,7 +1,5 @@
 ﻿using backend.backend.Exceptions;
 using backend.backend.Models.DTOs;
-using Microsoft.EntityFrameworkCore;
-using PCBForge.backend.Data;
 using PCBForge.backend.Models;
 
 namespace backend.backend.Services
