@@ -9,7 +9,10 @@ namespace PCBForge.backend.Controllers
     public class ComponentTypeController : ControllerBase
     {
         private readonly AppDbContext _context;
-        public ComponentTypeController(AppDbContext context) => _context = context;
+        public ComponentTypeController(AppDbContext context)
+        {
+            _context = context;
+        }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
