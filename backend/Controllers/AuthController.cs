@@ -26,7 +26,7 @@ namespace backend.backend.Controllers
             try
             {
                 var user = await _authService.RegisterAsync(dto);
-                UserResponseDto userResponseDto = new UserResponseDto
+                var userResponseDto = new UserResponseDto
                 {
                     Id = user.Id,
                     FirstName = user.FirstName,
@@ -63,12 +63,13 @@ namespace backend.backend.Controllers
 
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
-                UserResponseDto userResponseDto = new UserResponseDto
+                var userResponseDto = new UserResponseDto
                 {
                     Id = user.Id,
                     FirstName = user.FirstName,
                     LastName = user.LastName,
-                    Email = user.Email
+                    Email = user.Email,
+                    Role = user.Role.Name
                 };
                 return StatusCode(StatusCodes.Status200OK, userResponseDto);
             }
@@ -90,12 +91,13 @@ namespace backend.backend.Controllers
         [Authorize]
         public IActionResult Me()
         {
-            UserResponseDto userResponseDto = new UserResponseDto
+            var userResponseDto = new UserResponseDto
             {
-                Id = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value),
-                FirstName = User.FindFirst(ClaimTypes.GivenName)?.Value,
-                LastName = User.FindFirst(ClaimTypes.Surname)?.Value,
-                Email = User.FindFirst(ClaimTypes.Email)?.Value
+                Id = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!),
+                FirstName = User.FindFirstValue(ClaimTypes.GivenName)!,
+                LastName = User.FindFirstValue(ClaimTypes.Surname)!,
+                Email = User.FindFirstValue(ClaimTypes.Email)!,
+                Role = User.FindFirstValue(ClaimTypes.Role)!
             };
 
             return Ok(userResponseDto);

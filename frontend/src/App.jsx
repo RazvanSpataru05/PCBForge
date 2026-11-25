@@ -1,25 +1,16 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-function Home() {
-    return <h1>PCB Forge - Home</h1>;
-}
-
-function Login() {
-    return <h1>Login Page</h1>;
-}
-
-function Register() {
-    return <h1>Register Page</h1>;
-}
+import Home from './pages/Home';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/register" element={<RegisterPage />} />
             </Routes>
         </BrowserRouter>
     );
