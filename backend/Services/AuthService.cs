@@ -28,7 +28,7 @@ namespace backend.backend.Services
                 throw new EmailAlreadyExistsException("Email already exists.");
 
             var role = await _roleRepository.GetByNameAsync("user")
-                        ?? throw new InvalidOperationException("Default role 'user' is missing from the database.");
+                    ?? throw new InvalidOperationException("Default role 'user' is missing from the database.");
 
             var user = new User
             {   

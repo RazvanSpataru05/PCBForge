@@ -15,8 +15,6 @@ namespace backend.backend.Models.DTOs
         [Required]
         [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,128}$",
             ErrorMessage = "Password must be at least 8 characters long.")]
-        string Password,
-
-        [Required][property: Compare("Password")] string ConfirmPassword 
+        string Password
     );
 }
